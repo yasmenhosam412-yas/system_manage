@@ -1,10 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 import 'package:system_manage/controllers/create_system_cubit/create_system_cubit.dart';
 import 'package:system_manage/controllers/requests/requests_cubit.dart';
@@ -19,13 +17,11 @@ import 'package:system_manage/core/utils/toasts.dart';
 import 'package:system_manage/core/widgets/custom_button.dart';
 import 'package:system_manage/core/widgets/custom_text_field.dart';
 import 'package:system_manage/models/user_model.dart';
-
 import '../../core/config/routes.dart';
 
 class SelectSystemScreen extends StatefulWidget {
-  final String uid;
 
-  const SelectSystemScreen({super.key, required this.uid});
+  const SelectSystemScreen({super.key});
 
   @override
   State<SelectSystemScreen> createState() => _SelectSystemScreenState();
@@ -41,8 +37,12 @@ class _SelectSystemScreenState extends State<SelectSystemScreen> {
   void initState() {
     super.initState();
     systemCode = TextEditingController();
-    context.read<UserCubit>().getUserData(widget.uid);
-    context.read<CreateSystemCubit>().getSystems(widget.uid);
+    context.read<UserCubit>().getUserData(
+      FirebaseAuth.instance.currentUser!.uid,
+    );
+    context.read<CreateSystemCubit>().getSystems(
+      FirebaseAuth.instance.currentUser!.uid,
+    );
   }
 
   @override
@@ -124,7 +124,7 @@ class _SelectSystemScreenState extends State<SelectSystemScreen> {
                         );
                       }
                       if (state is UserLoaded) {
-                        userModel = state.users['${widget.uid}'];
+                        userModel = state.users[FirebaseAuth.instance.currentUser!.uid];
                         return Column(
                           children: [
                             CustomTextField(
@@ -303,7 +303,7 @@ class _SelectSystemScreenState extends State<SelectSystemScreen> {
                             }
                             return GestureDetector(
                               onTap: () {
-                                final myId = widget.uid;
+                                final myId = FirebaseAuth.instance.currentUser!.uid;
                                 if (state.systems[index].systemOwner == myId) {
                                   Navigator.pushNamedAndRemoveUntil(
                                     context,

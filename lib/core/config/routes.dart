@@ -47,8 +47,7 @@ class AppRouters {
         page = ForgotPasswordScreen();
         break;
       case AppRoutes.userSystems:
-        final uid = settings?.arguments as String;
-        page = SelectSystemScreen(uid: uid);
+        page = SelectSystemScreen();
         break;
       case AppRoutes.createUserSystem:
         page = CreateSystemScreen();

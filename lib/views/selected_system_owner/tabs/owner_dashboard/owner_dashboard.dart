@@ -143,8 +143,8 @@ class _OwnerDashboardState extends State<OwnerDashboard> {
                   ),
 
                   SizedBox(height: AppPadding.medium),
-                  AttendaceSummery(present: "25", absent: "2", late: "3"),
-                  SizedBox(height: AppPadding.medium),
+                  // AttendaceSummery(present: "25", absent: "2", late: "3"),
+                  // SizedBox(height: AppPadding.medium),
                   BlocBuilder<ProjectsCubit, ProjectsState>(
                     builder: (context, state) {
                       if (state is GetProjectsLoaded) {

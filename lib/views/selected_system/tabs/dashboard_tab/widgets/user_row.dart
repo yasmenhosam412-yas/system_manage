@@ -40,8 +40,6 @@ class UserRow extends StatelessWidget {
             ],
           ),
         ),
-        Spacer(),
-        IconButton(onPressed: () {}, icon: Icon(Icons.notifications_outlined)),
       ],
     );
   }

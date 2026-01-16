@@ -28,19 +28,19 @@ class _SystemSelectedState extends State<SystemSelected> {
       DashboardTab(code: widget.code),
       ProjectsTab(code: widget.code),
       TasksTab(code: widget.code),
-      GestureDetector(
-        onTap: () {
-          FirebaseAuth.instance.signOut();
-          Navigator.pushNamedAndRemoveUntil(
-            context,
-            AppRoutes.login,
-            (route) => false,
-          );
-        },
-        child: Center(
-          child: Text(AppTexts.logout, style: TextStyle(fontSize: 24)),
-        ),
-      ),
+      // GestureDetector(
+      //   onTap: () {
+      //     FirebaseAuth.instance.signOut();
+      //     Navigator.pushNamedAndRemoveUntil(
+      //       context,
+      //       AppRoutes.login,
+      //           (route) => false,
+      //     );
+      //   },
+      //   child: Center(
+      //     child: Text(AppTexts.logout, style: TextStyle(fontSize: 24)),
+      //   ),
+      // ),
     ];
   }
 
@@ -71,10 +71,10 @@ class _SystemSelectedState extends State<SystemSelected> {
             icon: Icon(Icons.task_alt_outlined),
             label: AppTexts.Tasks,
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: AppTexts.Settings,
-          ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.settings),
+          //   label: AppTexts.Settings,
+          // ),
         ],
       ),
     );
