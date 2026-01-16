@@ -1,0 +1,56 @@
+name: system_manage
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  cached_network_image: ^3.4.1
+  cloud_firestore: ^6.1.0
+  cloudinary: ^1.2.0
+  dartz: ^0.10.1
+  easy_stepper: ^0.9.1
+  equatable: ^2.0.7
+  firebase_auth: ^6.1.2
+  firebase_core: ^4.2.1
+  fl_chart: ^1.1.1
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^9.1.1
+  flutter_colorpicker: ^1.1.0
+  flutter_svg: ^2.2.3
+  fluttertoast: ^9.0.0
+  image_picker: ^1.2.1
+  skeletonizer: ^2.1.1
+  url_launcher: ^6.3.2
+  uuid: ^4.5.2
+  flutter_native_splash: ^2.4.7
+  flutter_launcher_icons: ^0.14.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icons/
+    - assets/images/
+  fonts:
+    - family: font
+      fonts:
+        - asset: assets/fonts/font.otf
+
+
+flutter_native_splash:
+  image: "assets/icons/app_logo.png"
+  color: "#ffffff"
+
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icons/app_logo.png"

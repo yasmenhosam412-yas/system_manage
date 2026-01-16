@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "663884086142",
+    "project_id": "systemmange-c6681",
+    "storage_bucket": "systemmange-c6681.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:663884086142:android:9194038f9cc2271fc1d12f",
+        "android_client_info": {
+          "package_name": "com.example.system_manage"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0GFUsPO58TvdmjOw9ne3R8gbjRCY6cOE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
