@@ -1,3 +1,1 @@
-# system_manage
-
-A new Flutter project.
+![WhatsApp Image 2026-03-09 at 5 42 54 PM](https://github.com/user-attachments/assets/a1cb700d-96d9-441e-991f-add820b3eb19)![WhatsApp Image 2026-03-09 at 5 42 50 PM (1)](https://github.com/user-attachments/assets/69547470-9570-4338-8540-091a667f838e)![WhatsApp Image 2026-03-09 at 5 42 50 PM](https://github.com/user-attachments/assets/2bfc042e-ff23-4c89-b64e-d497f96cba42)
